@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8">
+  <link rel="stylesheet" href="global.css">
+  <link rel="shortcut icon" href="assets/logo-alura.svg" type="image/svg">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@100..900&display=swap" rel="stylesheet">
+  <title>Challenge Decodificador</title>
+</head>
+<body>
+  <header class="header">
+    <img src="assets/logo-alura.svg" alt="Logo da alura">
+  </header>
+  <form onsubmit={handleSubmit()} class="principal">
+    <div id="textInputContainer"  class="typed-text"> 
+      <textarea name="" id="encryptDecryptText" class="placeholder-textarea" placeholder="Digite o seu texto aqui"></textarea>
+    </div>
+    <div class="alert">
+      <img src="assets/explanation.svg" alt="Explanation">
+      <p>Apenas letras minúsculas e sem acento.</p>
+    </div>
+    <div class="button-container">
+      <button type="submit" class="button-cripto" value="encrypt">Criptografar</button>
+      <button type="submit" class="button-descripto" value="decrypt">Descriptografar</button>
+    </div>
+  </form>
+  <section class="result-area">
+    <img src="assets/not-found.svg" alt="" id="resultImage">
+    <div class="result-area-text" id="textResult">
+      <h2>Nenhuma mensagem encontrada.</h2>
+      <p>Digite um texto que você deseja criptografar ou descriptografar.</p>
+      <h3></h3>
+    </div>
+  </section>
+</body>
+<script type="text/javascript" src="script.js"></script>
+</html>
