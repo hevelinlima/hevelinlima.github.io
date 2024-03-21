@@ -34,7 +34,6 @@ body {
 
 .header {
   width: 14.25rem;
-  height: 100vh;
 
   display: flex;
   justify-content: center;
@@ -59,7 +58,7 @@ body {
 
 .placeholder-textarea {
   width: 100%;
-  height: 30rem;
+  height: 20rem;
   outline: none;
   resize: none;
   border: none;
@@ -67,6 +66,7 @@ body {
   background: transparent;
 
   font-size: 2rem;
+  line-height: 2.5rem;
 }
 
 .placeholder-textarea::placeholder {
@@ -138,6 +138,7 @@ body {
   background: white;
   min-height: 50rem;
   min-width: 25rem;
+  max-width: 35rem;
   height: auto;
   width: auto;
 }
@@ -166,12 +167,19 @@ body {
   color: var(--gray-400);
 }
 
-@media screen and (max-width: 375px) {
+@media screen and (max-width: 750px) {
   html {
     font-size: 65%;
   }
   body {
     flex-direction: column;
+    padding: 1.5rem;
+  }
+
+  .typed-text {
+    height: 20rem;
+    width: auto;
+    font-size: 1.5rem;
   }
 
   .header {
@@ -182,12 +190,11 @@ body {
     padding: 2rem 1.5rem 0 1.5rem;
     width: auto;
   }
-  .placeholder-textarea {
-    height: 2rem;
-  }
 
-  .typed-text {
-    font-size: 1.5rem;
+  .placeholder-textarea {
+    min-height: 3rem;
+    max-height: 15rem;
+    height: auto;
   }
 
   .button-container {
@@ -201,8 +208,9 @@ body {
 
   .result-area {
     margin: 2rem 0;
-    padding: 0 1rem;
-    border-radius: 16px;
+    padding: 2rem 2rem;
+    min-height: 15rem;
+    height: auto;
   }
 
   .result-area > img {
@@ -211,6 +219,10 @@ body {
 
   .result-area-text > h2 {
     font-size: 1.25rem;
+  }
+
+  .result-area-text > h3 {
+    align-text: justify;
   }
 
   .result-area-text > p {
