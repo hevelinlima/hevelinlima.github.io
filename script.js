@@ -6,9 +6,11 @@ function handleSubmit(){
   const action = event.submitter.value;
 
   //Mostra o texto digitado como texto normal 
+  
   const typedTextContainer = document.getElementById('textInputContainer');
   const typedText = encryptDecryptText.value;
   typedTextContainer.textContent = typedText;
+  
   
   //Recebe o texto digitado pelo usuário, e identifica se precisa ser encriptado 
   //ou descriptografado
@@ -21,7 +23,7 @@ function handleSubmit(){
     <h3>${encryptedText}</h3>
     `;
 
-    //Remove a imagem quando da section quando o seu conteúdo é alterado  
+    //Remove a imagem da section quando o seu conteúdo é alterado  
     const resultImage = document.getElementById('resultImage');
     resultImage.style.display = 'none';
 
@@ -36,7 +38,7 @@ function handleSubmit(){
     <h3>${decryptedText}</h3>
     `;
 
-    //Remove a imagem quando da section quando o seu conteúdo é alterado
+    //Remove a imagem da section quando o seu conteúdo é alterado
     const resultImage = document.getElementById('resultImage');
     resultImage.style.display = 'none';
 
@@ -81,6 +83,7 @@ function criptografarTexto(text) {
   return encryptedText;
 }
 
+// Função para decodificar o texto utilizando Regex
 function descriptografarTexto(text) {
   const decrypt = {
     'enter': 'e',

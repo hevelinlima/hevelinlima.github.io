@@ -133,7 +133,7 @@ body {
   border-radius: 32px;
   box-shadow: 0 0 2px white;
 
-  margin: 2.5rem 2.5rem 2.5rem 0;
+  margin: 2.5rem 2.5rem 2.5rem 2.5rem;
   padding: 1rem 2rem;
   background: var(--gray-300);
   min-height: 37rem;
@@ -173,12 +173,19 @@ body {
   color: var(--gray-500);
 }
 
+@media screen and (max-width: 1500px) {
+  header {
+    padding-left: 3rem;
+  }
+}
+
 @media screen and (max-width: 750px) {
   html {
     font-size: 85%;
   }
   body {
     flex-direction: column;
+    margin: 1rem;
     padding: 1.5rem;
   }
 
@@ -209,12 +216,15 @@ body {
   }
 
   .button-container > button {
-    width: 100%;
+    min-width: 29rem;
+    min-height: 4rem;
+    width: auto;
+    height: auto;
   }
 
   .result-area {
     margin: 2rem 0;
-    padding: 2rem 2rem;
+    padding: 2rem;
     min-height: 15rem;
     height: auto;
     width: auto;
@@ -235,5 +245,14 @@ body {
 
   .result-area-text > p {
     font-size: 1rem;
+  }
+}
+
+@media screen and (min-width: 200px) and (max-width: 500px) {
+  body {
+    width: auto;
+  }
+  header {
+    padding-left: none;
   }
 }
